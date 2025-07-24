@@ -11,7 +11,7 @@ import SwiftUI
 struct MVVM_C_DemoApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
         }
     }
 }

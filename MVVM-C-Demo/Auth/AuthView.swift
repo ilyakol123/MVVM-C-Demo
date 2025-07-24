@@ -17,6 +17,7 @@ struct AuthView: View {
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .autocapitalization(.none)
                 .shadow(radius: 5)
+            
             SecureField("Password", text: $viewModel.password)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .shadow(radius: 5)
@@ -46,5 +47,5 @@ struct AuthView: View {
 }
 
 #Preview {
-    AuthView(viewModel: AuthViewModel(authService: MockAuthService()))
+    AuthView(viewModel: AuthViewModel())
 }

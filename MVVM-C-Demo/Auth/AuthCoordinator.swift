@@ -6,3 +6,16 @@
 //
 
 import Foundation
+import SwiftUICore
+
+final class AuthCoordinator: Coordinator {
+    var onLoginSuccess: (() -> Void)?
+    
+    func start() -> AnyView {
+        let vm = AuthViewModel()
+        vm.onLoginSuccess = { [weak self] in
+            self?.onLoginSuccess?()
+        }
+        return AnyView(AuthView(viewModel: vm))
+    }
+}
